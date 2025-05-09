@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Information</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: darkorange; /* light gray background for header cells */
+            color: #333; /* dark gray text for header cells */
+        }
+        td {
+            background-color: #fff; /* white background for data cells */
+            color: #666; /* dark gray text for data cells */
+        }
+    </style>
+</head>
+<body>
+    <center><h2>Employee Information</h2><center>
+        <div class="container-fluid">
+            <table class="table my-5">
+              <thead class="table-success">
+                <th>Employee Id</th>
+                <th>Employee Name</th>
+                <th>Employee Age</th>
+                <th>Employee Mobile</th>
+                <th>Employee E-Mail</th>
+                <th>Employee City</th>
+                <th>Employee Salary</th>
+                <th>Update</th>
+                <th>Delete</th>
+              </thead>
+              <tbody>
+                {% for emp in employees%}
+                <tr>
+                  <th scope="row">{{ emp.eid }}</th>
+                  <td>{{ emp.name }}</td>
+                  <td>{{ emp.age }}</td>
+                  <td>{{ emp.mobile }}</td>
+                  <td>{{ emp.email }}</td>
+                  <td>{{ emp.city }}</td>
+                  <td>{{ emp.salary }}</td>
+                  <td><a href="{%url 'edit' emp.eid%}">Update</a></td>
+                  <td>
+                    <a href="{%url 'delete' emp.eid%}" style="color: red">Delete</a>
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </body>
+        </html>

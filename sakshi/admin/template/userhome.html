@@ -1,0 +1,56 @@
+{%extends 'base.html'%}
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome Home</title>
+    <body>
+        <h1>Welcome to Home Page</h1>
+        
+        
+    </body>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: right;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            padding: 6px 15px;
+            background-color: #ffffff;
+            color: #4e54c8;
+            border: none;
+            border-radius: 15px;
+            text-decoration: none;
+            font-size: 1em;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #4e54c8;
+            color: white;
+        }
+    </style>
+</head>
+
+</html>
+{%endblock%}
